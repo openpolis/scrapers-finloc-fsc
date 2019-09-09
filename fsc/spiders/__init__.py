@@ -26,7 +26,7 @@ class FSCSpider(scrapy.Spider):
 	user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) " \
 		"AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"
 	year_code = years_codes[settings.YEAR]
-	csv_file = 'fondo_solidarieta_sociale_minint.csv'
+	csv_file = f'data/fondo_solidarieta_sociale_minint_{settings.YEAR}.csv'
 
 	rules = [
 		Rule(
