@@ -9,13 +9,19 @@ import scrapy
 
 
 class FscItem(scrapy.Item):
+    nome = scrapy.Field()
+    codice_minint_fl = scrapy.Field()
+    anno = scrapy.Field()
+
+
+class FscItem2019(FscItem):
     prelievo_su_imu = scrapy.Field()
     fsc_totale = scrapy.Field()
     fsc_netto = scrapy.Field()
 
-    # codice ente
-    codice_minint_fl = scrapy.Field()
-    nome = scrapy.Field()
 
-    # anno
-    anno = scrapy.Field()
+class FscItem2018(FscItem):
+    riparto_pereq_art_1 = scrapy.Field()
+    riparto_pereq_fabb = scrapy.Field()
+    fsc_riparto_pereq_45 = scrapy.Field()
+    fsc_riparto_pereq_100 = scrapy.Field()
